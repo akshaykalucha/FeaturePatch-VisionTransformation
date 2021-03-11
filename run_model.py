@@ -4,7 +4,7 @@ from numpy.core.arrayprint import TimedeltaFormat
 import timm
 import torch
 from torch.nn import modules
-from main import VisionTransformer
+from VI_TS import VisionTransformer
 
 def get_n_params(module):
     return sum(p.numel() for p in module.parameters() if p.requires_grad)
