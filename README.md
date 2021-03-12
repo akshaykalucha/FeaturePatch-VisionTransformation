@@ -47,6 +47,9 @@ Statistical pattern recognition, nowadays often known under the term "machine le
 * This repository is uses Py-Torch implementation availabale <a href="https://github.com/rwightman/pytorch-image-models">here</a>
 * The Py-Torch repository has pre-trained weights
 
+</br>
+<div style="text-align:center"><img align="center" src="images/example.jpg" alt="logo"></div>
+</br>
 The code just a rewrite & straight implementation of the VisionTransformer class, with minor modifications <br /> and simplifications the class function is easier to run & modify for future work to patch and embed images for classification.
 
 A list of commonly used resources that I find helpful are listed in the acknowledgements.
