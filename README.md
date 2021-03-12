@@ -74,15 +74,20 @@ The network is trained in three steps where image is turned in sequence of 1D to
 * Mask inference to obtain the cropped images and perform fine-tuning of the local feature. Hereby, the weights in the global features are fixed.
 * Concatenating of the global and local feature outputs and fine-tuning of the fusion feature while freezing the weights of the other features.
 * The position embeding allows the network to determine what part of the image a specific patch came from.
+</br>
+</br>
+</br>
 
 
+<div style="text-align:center"><img src="images/attention.jpg" alt="logo">
+</br>
 
-<div style="text-align:center"><img align="center" src="images/attention.jpg" alt="logo">
-
-<i><small>stand-alone self-attention</small></i></div>
-
+<i><small>stand-alone self-attention</small></i>
+</div>
 
 
+</br>
+</br>
 
 ### Prerequisites
 
