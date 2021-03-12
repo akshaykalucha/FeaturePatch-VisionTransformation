@@ -6,18 +6,6 @@ import torch
 from torch.nn import modules
 from VI_TS import VisionTransformer
 
-def get_n_params(module):
-    return sum(p.numel() for p in module.parameters() if p.requires_grad)
-def assert_tensors_equal(t1, t2):
-    a1, a2 = t1.detach().numpy(), t2.detach().numpy()
-
-    np.testing.assert_allclose(a1, a2)
-
-
-model_name = "vit_base_patch16_384"
-model_official = timm.create_model(model_name, pretrained=True)
-model_official.eval()
-print(type(model_official))
 
 custom_config = {
     "img_size": 384,
@@ -29,6 +17,23 @@ custom_config = {
     "qkv_bias": True,
     "mlp_ratio": 4,
 }
+
+# Testing the tensors
+def get_n_params(module):
+    return sum(p.numel() for p in module.parameters() if p.requires_grad)
+def assert_tensors_equal(t1, t2):
+    a1, a2 = t1.detach().numpy(), t2.detach().numpy()
+
+    np.testing.assert_allclose(a1, a2)
+
+
+
+# Download & save the model
+model_name = "vit_base_patch16_384"
+model_official = timm.create_model(model_name, pretrained=True)
+model_official.eval()
+print(type(model_official))
+
 
 model_custom = VisionTransformer(**custom_config)
 model_custom.eval()
