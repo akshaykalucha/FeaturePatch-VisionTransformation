@@ -145,5 +145,4 @@ Contributions are what make the open source community such an amazing place to b
 * [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/pdf/2010.11929.pdf)
 * [The Annotated Transformer
 ](https://nlp.seas.harvard.edu/2018/04/03/attention.html)
-
-
+* [Google-reserach Vision Transformation](https://github.com/google-research/vision_transformer)

@@ -6,6 +6,7 @@ hammerhead, hammerhead_shark
 electric_ray, crampfish, numbfish, torpedo
 stingray
 cock
+corona
 hen
 ostrich, Struthio_camelus
 brambling, Fringilla_montifringilla
