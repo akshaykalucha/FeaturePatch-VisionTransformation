@@ -45,7 +45,7 @@ im = Image.open(args["image"])
 if im.size == (384, 384):
     print(f"{bcolors.OKGREEN}Running: the image matches the path, running MLP...{bcolors.ENDC}")
 else:
-    print(f"{bcolors.WARNING}Warning: Image not 384x384, resizing and overriding!-{bcolors.ENDC}")
+    print(f"{bcolors.FAIL}Warning: Image not 384x384, resizing and overriding!-{bcolors.ENDC}")
     resize(args["image"])
     im = Image.open(args["image"])
 img = (np.array(im) / 128) - 1
