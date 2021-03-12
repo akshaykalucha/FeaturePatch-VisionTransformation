@@ -32,9 +32,7 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#acknowledgements">Acknowledgements & Resources</a></li>
   </ol>
 </details>
 
@@ -74,20 +72,15 @@ The network is trained in three steps where image is turned in sequence of 1D to
 * Mask inference to obtain the cropped images and perform fine-tuning of the local feature. Hereby, the weights in the global features are fixed.
 * Concatenating of the global and local feature outputs and fine-tuning of the fusion feature while freezing the weights of the other features.
 * The position embeding allows the network to determine what part of the image a specific patch came from.
-</br>
-</br>
-</br>
 
 
-<div style="text-align:center"><img src="images/attention.jpg" alt="logo">
-</br>
 
-<i><small>stand-alone self-attention</small></i>
-</div>
+<div style="text-align:center"><img align="center" src="images/attention.jpg" alt="logo">
+
+<i><small>stand-alone self-attention</small></i></div>
 
 
-</br>
-</br>
+
 
 ### Prerequisites
 
@@ -96,3 +89,61 @@ Install the depecdencies before running the `compute.py` file
   ```sh
   $ pip install -r requirements.txt
   ```
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+<p>First, build & download the model using command:</p>
+
+```sh
+python run_model.py
+```
+you can change the attributes & parametrers by, the default image is `384x384`:
+```sh
+custom_config = {
+    "img_size": 384,
+    "in_chans": 3,
+    "patch_size": 16,
+    "embed_dim": 768,
+    "depth": 12,
+    "n_heads": 12,
+    "qkv_bias": True,
+    "mlp_ratio": 4,
+}
+
+```
+
+</br>
+
+To run the clasification function and predict probability output:
+
+```sh
+python compute.py -image or -i <image destination, usually the base dir>
+```
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/FeaturePatch-VisionTransformation`)
+3. Commit your Changes (`git commit -m 'Add some updates'`)
+4. Push to the Branch (`git push origin feature/FeaturePatch-VisionTransformation`)
+5. Open a Pull Request
+
+
+
+
+
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+* [Py-Torch Vision Transformation](https://github.com/rwightman/pytorch-image-models)
+* [Statistical Pattern Recognition](https://lmb.informatik.uni-freiburg.de/lectures/spr/)
+* [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/pdf/2010.11929.pdf)
+* [The Annotated Transformer
+](https://nlp.seas.harvard.edu/2018/04/03/attention.html)
+
+
