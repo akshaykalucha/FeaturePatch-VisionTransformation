@@ -87,7 +87,7 @@ The network is trained in three steps where image is turned in sequence of 1D to
 
 ### Prerequisites
 
-Install the depecdencies before running the `compute.py` file
+Install the dependencies before running the `compute.py` file
 * pip
   ```sh
   $ pip install -r requirements.txt
@@ -101,7 +101,7 @@ Install the depecdencies before running the `compute.py` file
 ```sh
 python run_model.py
 ```
-you can change the attributes & parametrers by, the default image is `384x384`:
+you can change the attributes & parameters by, the default image is `384x384`:
 ```sh
 custom_config = {
     "img_size": 384,
@@ -118,7 +118,7 @@ custom_config = {
 
 </br>
 
-To run the clasification function and predict probability output:
+To run the classification function and predict probability output:
 
 ```sh
 python compute.py -image or -i <image destination, usually the base dir>
